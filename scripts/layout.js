@@ -15,8 +15,7 @@ let totalRows = 0;
 let totalColumns = 0;
 let grid = document.querySelector('.grid');
 let cells = [
-  [2, 1],
-  [2, 1],
+  [1, 1],
   [1, 2],
   [1, 2],
   [2, 2],
@@ -27,7 +26,6 @@ let cells = [
 ];
 
 let imageUrls = [
-    './img/chicago.png',
     './img/fall.png',
     './img/juno_nose.png',
     './img/multnomah_falls.png',

@@ -2,6 +2,28 @@ body {
 	margin: 0;
 }
 
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+span#typing {
+	opacity: 0.8;
+	text-shadow: none;
+	font-family: Consolas, Monaco, monospace;
+	font-size: 15px;
+	border-right: 1px solid #6b7381;
+	width: 34ch;
+	margin: auto;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 2s steps(34, end),
+	blink-caret .7s step-end infinite alternate;
+}
+
+.pull-left {
+	float: left;
+}
+
 .pull-right {
 	float: right;
 }
@@ -25,6 +47,18 @@ body {
 	z-index: 10;
 }
 
+.nav > a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.nav > a:first-child {
+	padding-left: 25px;
+}
+
+.nav > a:nth-child(4) {
+	padding-right: 25px;
+}
 .panel {
 	background-image: url('../img/lands_end.png');
 	margin: 0 0;
@@ -40,15 +74,17 @@ body {
 .panel header {
 	margin: 0 auto;
 	padding: 1em;
-	text-align: center;
+	text-align: left;
 }
 
 .panel header h1 {
-	font-size: 3.6em;
+	font-size: 36px;
 	line-height: 1.2;
 	margin: 0;
 	margin-top: 80px;
 	font-weight: 300;
+	color: black;
+	width: 500px;
 
 }
 
@@ -60,11 +96,79 @@ body {
 
 .grid > div {
 	position: absolute;
-	background-color: #f44;
 	overflow: auto;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	background-position: center;
+}
+
+.left-pane {
+	width: 400px;
+	height: 100vh;
+	background-color: #bbb;
+}
+
+.right-pane {
+	height: 100vh;
+	width: calc(100% - 400px);
+	background-color: #ddd;
+}
+
+.portrait {
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 100px;
+}
+
+.portrait img {
+	height: 30%;
+	width: 200px;
+	min-height: 300px;
+	border-radius: 40%;
+	margin: 0 auto;
+	overflow: auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.skill-container {
+	color: #009999;
+	width: 200px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 150px;
+}
+
+.skills {
+	width: 200px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.skill {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.description {
+	display: flex;
+	justify-content: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 20%;
+	font-size: 20px;
+	background-color: white;
+	border-color: #009999;
+	border-radius: 20px;
+	padding: 20px;
+	border: 1px solid #009999
 }
